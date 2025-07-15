@@ -113,9 +113,9 @@
     </div>
 
     <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/1Aw3xtb4qN/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/hermes_anime_movie?igsh=YjNwbGs2cTkxeW1q" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@hermes.official8?_t=ZS-8y2ygDeHKO9&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
 
     <div class="footer-bottom">
@@ -129,6 +129,25 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="asset/main.js"></script>
+
+    <!-- Mailto handler script -->
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop the form from submitting normally
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const mailtoLink = `mailto:companyhermes04@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message
+    )}`;
+
+    window.location.href = mailtoLink;
+  });
+</script>
+
 
 </body>
 
