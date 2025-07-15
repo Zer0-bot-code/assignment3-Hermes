@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Coming Soon</title>
+
+  <link rel="stylesheet" type="text/css" href="asset/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+
+  <nav id="navbar">
+  <div class="logo"><a href="index.html">Hermes</a></div>
+
+  <!-- Hamburger menu icon -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Navigation links -->
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li>
+      <a href="movie.html">Movies</a>
+      <ul class="dropdown">
+        <li><a href="movie_most_view.html">Most View</a></li>
+        <li><a href="movie_latest.html">Latest</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="anime.html">Anime</a>
+      <ul class="dropdown">
+        <li><a href="anime_most_view.html">Most View</a></li>
+        <li><a href="anime_latest.html">Latest</a></li>
+      </ul>
+    </li>
+    <li><a href="coming_soon.html">Coming Soon</a></li>
+    <li><a href="top_airing.html">Top Airing</a></li>
+    <li><a href="about_us.html">About Us</a></li>
+    <li><a href="contact_us.html">Contact Us</a></li>
+  </ul>
+
+  <div class="right-section">
+    <a href="search.html"><ion-icon name="search-outline"></ion-icon></a>
+  </div>
+</nav>
+
+
+  <!-- Anime Schedule -->
+  <div class="container-schedule">
+    <div class="header-schedule">
+      <h2>Upcoming Anime And Movie</h2>
+    </div>
+
+    <!-- Days Tabs -->
+    <div class="days-tabs">
+      <button class="nav-arrow"><a href="coming_soon_wednesday.html">❮</a></button>
+      <a href="coming_soon.html">
+        <div class="day">Sun<br><span>Jul 13</span></div>
+      </a>
+      <a href="coming_soon_monday.html">
+        <div class="day">Mon<br><span>Jul 14</span></div>
+      </a>
+      <a href="coming_soon_tuesday.html">
+        <div class="day">Tue<br><span>Jul 15</span></div>
+      </a>
+      <a href="coming_soon_wednesday.html">
+        <div class="day">Wed<br><span>Jul 16</span></div>
+      </a>
+      <a href="#">
+        <div class="day active">Thu<br><span>Jul 17</span></div>
+      </a>
+      <a href="coming_soon_friday.html">
+        <div class="day">Fri<br><span>Jul 18</span></div>
+      </a>
+      <a href="coming_soon_saturday.html">
+        <div class="day">Sat<br><span>Jul 19</span></div>
+      </a>
+      <button class="nav-arrow"><a href="coming_soon_friday.html">❯</a></button>
+    </div>
+
+    <div class="schedule">
+      <div class="item">
+        <span class="time">15:00</span>
+        <span class="title"><a href="intersteller_page.html"> Interstellar</a></span>
+        <span class="episode">Movie</span>
+      </div>
+
+      <div class="item">
+        <span class="time">17:00</span>
+        <span class="title"><a href="avengers_infinity_war_page.html">Avenger Infinity War</a></span>
+        <span class="episode">Movie</span>
+      </div>
+
+      <div class="item">
+        <span class="time">20:00</span>
+        <span class="title"><a href="lord_of_mysteries_page.html">Lord of Mystery</a></span>
+        <span class="episode">Episode 2</span>
+      </div>
+
+      <div class="item">
+        <span class="time">20:30</span>
+        <span class="title"><a href="the_water_magician_page.html">The Water Magician</a></span>
+        <span class="episode">Episode 5</span>
+      </div>
+
+      <div class="item">
+        <span class="time">22:00</span>
+        <span class="title"><a href="clevatess_page.html">Clevatess</a></span>
+        <span class="episode">Episode 2</span>
+      </div>
+
+      <div class="item">
+        <span class="time">23:00</span>
+        <span class="title"><a href="new_saga_page.html">New Saga</a></span>
+        <span class="episode">Episode 1</span>
+      </div>
+
+      <div class="item">
+        <span class="time">00:00</span>
+        <span class="title"><a href="chainsaw_man_page.html">Chainsaw Man</a></span>
+        <span class="episode">Episode 2</span>
+      </div>
+
+      <!-- Hidden content -->
+      <div class="extra-items hidden">
+        <div class="item">
+          <div class="time">01:30</div>
+          <div class="title"><a href="one_piece_page.html">One Peace</a></div>
+          <div class="episode">Episode 2</div>
+        </div>
+        <div class="item">
+          <div class="time">02:00</div>
+          <div class="title"><a href="tougen_anki_page.html">Tougen Anki</a></div>
+          <div class="episode">Episode 2</div>
+        </div>
+        <div class="item">
+          <div class="time">02:30</div>
+          <div class="title"><a href="gachiakuta_page.html">Gachaikuta</a></div>
+          <div class="episode">Episode 5</div>
+        </div>
+      </div>
+      <div class="show-more" onclick="toggleSchedule()">Show more</div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movie.html">Movie</a></li>
+          <li><a href="anime.html">Anime</a></li>
+          <li><a href="coming_soon.html">Coming Soon</a></li>
+          <li><a href="top_airing.html">Top Airing</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Reach us</h3>
+        <p>Chuchuh, 02100 Padang Besar, Perlis</p>
+        <p>companyhermes04@gmail.com</p>
+        <p>017-3092795</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Hermes don't claim any copyright of any kind of content we use in this website. We use already existing
+          pictures and information
+          from the internet. If you have any copyright issues, please contact us via email. We will remove the content
+          immediately.</p>
+        <p>We are not responsible for any content that is not available on this website.</p>
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com/share/1Aw3xtb4qN/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/hermes_anime_movie?igsh=YjNwbGs2cTkxeW1q" target="_blank"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@hermes.official8?_t=ZS-8y2ygDeHKO9&_r=1" target="_blank"><i
+          class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy;2025 Hermes. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="asset/main.js"></script>
+
+</body>
+
+</html>

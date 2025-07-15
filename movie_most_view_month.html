@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Movie Most View</title>
+
+  <link rel="stylesheet" type="text/css" href="asset/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+
+  <nav id="navbar">
+  <div class="logo"><a href="index.html">Hermes</a></div>
+
+  <!-- Hamburger menu icon -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Navigation links -->
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li>
+      <a href="movie.html">Movies</a>
+      <ul class="dropdown">
+        <li><a href="movie_most_view.html">Most View</a></li>
+        <li><a href="movie_latest.html">Latest</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="anime.html">Anime</a>
+      <ul class="dropdown">
+        <li><a href="anime_most_view.html">Most View</a></li>
+        <li><a href="anime_latest.html">Latest</a></li>
+      </ul>
+    </li>
+    <li><a href="coming_soon.html">Coming Soon</a></li>
+    <li><a href="top_airing.html">Top Airing</a></li>
+    <li><a href="about_us.html">About Us</a></li>
+    <li><a href="contact_us.html">Contact Us</a></li>
+  </ul>
+
+  <div class="right-section">
+    <a href="search.html"><ion-icon name="search-outline"></ion-icon></a>
+  </div>
+</nav>
+
+
+  <!-- Main Section -->
+  <div class="top10-container">
+    <h2>Top Movie</h2>
+    <div class="tab-buttons">
+      <button><a href="movie_most_view.html">Today</a> </button>
+      <button><a href="movie_most_view_week.html">Week</a></button>
+      <button class="active"><a href="#">Month</a></button>
+    </div>
+
+    <div class="top10-list">
+
+      <div class="top10-item">
+        <div class="rank-num">01</div>
+        <img src="asset/images/top_gun_maverick_vertical.jpg" alt="Top Gun: Maverick">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">Top Gun: Maverick</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1101">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1101</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">After more than 30 years of service as one of the Navy's top aviators, Pete "Maverick"
+            Mitchell is where he belongs,
+            pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.
+            Training a detachment
+            of graduates for a special assignment, Maverick must confront the ghosts of his past....<a
+              href="top_gun_maverick_page.html">see more</a> </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">02</div>
+        <img src="asset/images/how_to_train_your_dragon_vertical.jpg" alt="How To Train Your Dragon">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">How To Train Your Dragon</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1092">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1092</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">On the rugged isle of Berk, a Viking boy named Hiccup defies centuries of tradition by
+            befriending a dragon
+            named Toothless. However, when an ancient threat emerges that endangers both species, Hiccup's friendship
+            with Toothless
+            becomes the key....<a href="how_to_train_your_dragon_ page.html">see more</a> </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">03</div>
+        <img src="asset/images/mission_impossible_the_final_reckoning_vertical.jpg"
+          alt="Mission: Impossible - The Final Reckoning">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">Mission: Impossible - The Final Reckoning</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1083">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1083</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">IMF Agent Ethan Hunt goes on a mission with his team to try and stop a man named Gabriel
+            before he can obtain an
+            AI program that can weaken the world's stability......<a
+              href="mission_impossible_the_final_reckoning_page.html">see more</a> </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">04</div>
+        <img src="asset/images/the_shawshank_redemption_vertical.jpg" alt="The Shawshank Redemption">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">The Shawshank Redemption</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1077">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1077</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">Andy Dufresne (Tim Robbins) is sentenced to two consecutive life terms in prison for the
+            murders of his wife
+            and her lover and is sentenced to a tough prison. However, only Andy knows he didn't commit the crimes.
+            While there, he forms a
+            friendship with Red (Morgan Freeman), experiences brutality.....<a href="the_shawshank_page.html">see
+              more</a> </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">05</div>
+        <img src="asset/images/f1_the_movie.png" alt="F1: The Movie">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">F1: The Movie</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1067">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1067</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">In the 1990s, Sonny Hayes was Formula 1's most promising driver until an accident on the
+            track nearly ended his
+            career. Thirty years later, the owner of a struggling Formula 1 team convinces Sonny to return to racing and
+            become
+            the best....<a href="f1_the_movie_page.html">see more</a> </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">06</div>
+        <img src="asset/images/interstellar_vertical.png" alt="Interstellar">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">Interstellar</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1057">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1057</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the
+            planet uninhabitable.
+            Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans to save mankind by
+            transporting Earth's population
+            to a new home via a wormhole. But first, Brand must send former NASA pilot Cooper.....<a
+              href="intersteller_page.html">see more</a> </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">07</div>
+        <img src="asset/images/the_dark_knight.jpg" alt="The Dark Knight">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">The Dark Knight</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1043">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1043</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">It has been eight years since Batman (Christian Bale), in collusion with Commissioner
+            Gordon (Gary Oldman),
+            vanished into the night. Assuming responsibility for the death of Harvey Dent, Batman sacrificed everything
+            for what he and Gordon
+            hoped would be the greater good. However, the arrival of a cunning cat burglar....<a
+              href="the_dark_knight_page.html">see more</a> </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">08</div>
+        <img src="asset/images/oppenheimer.jpg" alt="Oppenheimer">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">Oppenheimer</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1035">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1035</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer
+            to work on the top-secret
+            Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic
+            bomb. Their work comes to
+            fruition on July 16, 1945, as they witness the world's....<a href="oppenheimer_page.html">see more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">09</div>
+        <img src="asset/images/avengers_infinity_war_vertical.jpg" alt="Avengers: Infinity War">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">Avengers: Infinity War</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1029">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1029</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">Iron Man, Thor, the Hulk and the rest of the Avengers unite to battle their most
+            powerful enemy yet -- the
+            evil Thanos. On a mission to collect all six Infinity Stones, Thanos plans to use the artifacts to inflict
+            his twisted will on
+            reality. The fate of the planet and existence itself has never been more uncertain....<a
+              href="avengers_infinity_war_page.html">see more</a> </div>
+        </div>
+      </div>
+
+      <div class="top10-item">
+        <div class="rank-num">10</div>
+        <img src="asset/images/inception_vertical.jpg" alt="Inception">
+        <div class="info">
+          <div class="info-left">
+            <div class="title">Inception</div>
+            <div class="badges">
+              <button class="like-btn" data-count="1013">
+                <span class="badges blue"><ion-icon name="heart-outline"></ion-icon><span class="like-count">1013</span>
+              </button>
+            </div>
+          </div>
+          <div class="synopsis">A thief who steals corporate secrets through the use of dream-sharing technology is
+            given the inverse task of
+            planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team
+            to disaster.....<a href="inception_page.html">see more</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movie.html">Movie</a></li>
+          <li><a href="anime.html">Anime</a></li>
+          <li><a href="coming_soon.html">Coming Soon</a></li>
+          <li><a href="top_airing.html">Top Airing</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Reach us</h3>
+        <p>Chuchuh, 02100 Padang Besar, Perlis</p>
+        <p>companyhermes04@gmail.com</p>
+        <p>017-3092795</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Hermes don't claim any copyright of any kind of content we use in this website. We use already existing
+          pictures and information
+          from the internet. If you have any copyright issues, please contact us via email. We will remove the content
+          immediately.</p>
+        <p>We are not responsible for any content that is not available on this website.</p>
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com/share/1Aw3xtb4qN/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/hermes_anime_movie?igsh=YjNwbGs2cTkxeW1q" target="_blank"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@hermes.official8?_t=ZS-8y2ygDeHKO9&_r=1" target="_blank"><i
+          class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy;2025 Hermes. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="asset/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1760 @@
+/*-----------------navigation bar section-----------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+nav {
+  /* navigation color and layout */
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-color: rgb(225, 215, 0);
+  border-bottom: 1px solid #eee;
+  transition: top 0.3s ease-in-out;
+  top: 0;
+  height: 11vh;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.nav-hide {
+  top: -100px;
+  /* move navbar out of view */
+}
+
+.logo {
+  font-family: cursive;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  /* list box */
+  position: relative;
+}
+
+.nav-links>li>a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.nav-links li:hover>a {
+  color: red;
+}
+
+/* dropdown Menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #eee;
+  min-width: 150px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown li a {
+  /* style for dropdown links */
+  padding: 10px 15px;
+  display: block;
+  font-size: 14px;
+  color: #111;
+  text-decoration: none;
+  background: transparent;
+  border-radius: 0;
+}
+
+.dropdown li a:hover {
+  /* change background color on hover */
+  background: #f5f5f5;
+  color: red;
+}
+
+/*Dropdown Menu End */
+
+.nav-links li:hover .dropdown {
+  display: block;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: red;
+  bottom: -5px;
+  left: 0;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-section a {
+  /* Search icon edit */
+  text-decoration: none;
+  color: #000000;
+  font-size: 32px;
+  /* adjust the size of the icon*/
+}
+
+.right-section a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+/*-----------------end of navigation bar section-----------------*/
+
+
+/*-----------------Responsive navigation bar section-----------------*/
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    padding: 10px 20px;
+    height: auto;
+    align-items: center;
+    position: relative;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(225, 215, 0);
+    display: none;
+    gap: 0;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  .dropdown li a {
+    background: transparent;
+    color: #111;
+    padding-left: 25px;
+  }
+
+  .right-section {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/*-----------------Responsive navigation bar section-----------------*/
+
+
+/*-----------------All Page Begin-----------------*/
+body {
+  height: 100%;
+  padding-top: 80px;
+  background-color: rgb(0, 0, 0);
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  margin: 0;
+  color: #b8b8b8;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 18px;
+  color: #b9b9b9;
+  margin: 15px 0 10px 0;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+p {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 15px 0;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 16px;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: none;
+  /* hidden by default */
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #1ea2ee;
+  transform: scale(1.1);
+}
+
+/* Link Styles */
+a {
+  color: inherit;
+  /* change link color*/
+  text-decoration: none;
+}
+
+/* ionicon edit */
+ion-icon {
+  font-size: 25px;
+}
+
+/*-----------------All Page End-----------------*/
+
+/*-----------------Seaching Page Begin-----------------*/
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+html {
+  animation: fade 1s;
+}
+
+#searchInput {
+  align-self: center;
+  width: 90%;
+  /* Full-width */
+  font-size: 16px;
+  /* Increase font-size */
+  padding: 12px 20px 12px 20px;
+  /* Add some padding */
+  border: 1px solid #ddd;
+  /* Add a grey border */
+  margin-bottom: 12px;
+  /* Add some space below the input */
+}
+
+#searchList {
+  align-self: center;
+  /* Remove default list styling */
+  width: 90%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  /* Hide list by default */
+}
+
+#searchList.show {
+  display: block;
+  /* Show when 'show' class is added */
+}
+
+#searchList li a {
+  border: 1px solid #ddd;
+  /* Add a border to all links */
+  margin-top: -1px;
+  /* Prevent double borders */
+  background-color: #f6f6f6;
+  /* Grey background color */
+  padding: 12px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove default text underline */
+  font-size: 18px;
+  /* Increase the font-size */
+  color: black;
+  /* Add a black text color */
+  display: block;
+  /* Make it into a block element to fill the whole list */
+}
+
+#searchList li a:hover:not(.header) {
+  background-color: #eee;
+  /* Add a hover effect to all links, except for headers */
+}
+
+.close-btn {
+  position: fixed;
+  top: 15px;
+  right: 45px;
+  font-size: 48px;
+  color: #ccc;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+/*-----------------search page end-----------------*/
+
+
+/*-----------------Home Page Begin-----------------*/
+/* Gallery Picture */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 1000%;
+  /* Adjust this if more slides */
+}
+
+.slide {
+  width: 100vw;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+.text-box {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.img-box img {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.tag {
+  color: #e88fff;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 10px 0;
+}
+
+.info span {
+  margin-right: 10px;
+  font-size: 0.9em;
+  color: #ffffff;
+}
+
+.badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  background: #444;
+}
+
+.hd {
+  background: #e64857;
+}
+
+.cc {
+  background: #9df196;
+}
+
+.audio {
+  background: #78c2ff;
+}
+
+.age {
+  background: #ccc;
+}
+
+.description {
+  margin: 1em 0;
+  color: #ccc;
+}
+
+.buttons .btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.watch {
+  background-color: #f88ccf;
+  color: black;
+}
+
+.detail {
+  background: transparent;
+  border: 1px solid #aaa;
+  color: white;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+
+.nav-btn:not(.right) {
+  left: 10px;
+}
+
+/*-----------------responsive gallery image section-----------------*/
+
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: row; /* keep side by side */
+    flex-wrap: wrap;     /* allow wrapping if needed */
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .text-box {
+    max-width: 45%;
+    flex: 1;
+    padding: 0;
+  }
+
+  .img-box {
+    max-width: 45%;
+    flex: 1;
+  }
+
+  .img-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .info span {
+    font-size: 11px;
+    margin: 2px 4px;
+  }
+
+  .buttons .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-top: 8px;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+    padding: 6px;
+  }
+}
+
+
+/*-----------------responsive gallery image end-----------------*/
+
+
+/* anime and movie list */
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Hide scrollbar for Firefox */
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for Chrome/Safari */
+}
+
+.episode-card {
+  background-color: white;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.episode-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  background-color: #ddd;
+  transition: 0.3s ease;
+}
+
+.episode-image:hover {
+  transform: scale(1.05);
+}
+
+.episode-info {
+  padding: 10px;
+}
+
+.episode-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.episode-meta {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Navigation Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-arrow.left {
+  left: 10px;
+}
+
+.slider-arrow.right {
+  right: 10px;
+}
+
+.slider-arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* View More Button */
+.view-more {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.view-more:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+.view-more::after {
+  content: "→";
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Section Header Container */
+.section-header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+}
+
+/*-----------------Home Page End-----------------*/
+
+
+/*-----------------Anime And Movie Page Begin-----------------*/
+/*autoplay video section*/
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: black;
+  margin-top: 2px;
+  z-index: 0;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-wrapper {
+  width: 100%;
+}
+
+/*Brief Intro*/
+.intro-section {
+  padding: 20px 10px;
+  /*this line to adjust distant between two content*/
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.intro-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  float: left;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 5px 90px;
+  border-radius: 25px;
+}
+
+.intro-block.reverse {
+  float: right;
+}
+
+.intro-image img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.intro-text {
+  max-width: 500px;
+}
+
+.intro-text h5 {
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.intro-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.intro-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.intro-button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+/*-----------------Anime and Movie Page End-----------------*/
+
+/*----------------- responsive Anime and Movie Page-----------------*/
+@media (max-width: 768px) {
+  .video-container {
+    height: 200px;
+  }
+
+  .intro-block {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+  }
+
+  .intro-image img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 20px;
+  }
+
+  .intro-text p {
+    font-size: 13px;
+  }
+
+  .intro-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/*----------------- responsive Anime and Movie Page end-----------------*/
+
+
+/*-----------------Latest Page Begin-----------------*/
+.slider-grid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Grid layout for cards */
+.slider-card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 cards per row */
+  grid-gap: 25px;
+  padding: 0;
+  overflow: visible;
+}
+
+.episode-card-2 {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  /* Fill grid cell */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.episode-image-2 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #ddd;
+  transition: 0.3s ease;
+}
+
+.episode-image-2:hover {
+  transform: scale(1.05);
+}
+
+.episode-inf0-2 {
+  padding: 10px;
+}
+
+.episode-title-2 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.episode-meta-2 {
+  font-size: 12px;
+  color: #777;
+}
+
+/*-----------------Latest Page End-----------------*/
+
+/*-----------------Responsive Latest Page-----------------*/
+@media (max-width: 1024px) {
+  .slider-card {
+    grid-template-columns: repeat(3, 1fr); /* 3 mean 3 card for tab*/
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-card {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards for phones */
+  }
+
+  .episode-image-2 {
+    height: 150px; 
+  }
+
+  .episode-title-2 {
+    font-size: 13px;
+  }
+
+  .episode-meta-2 {
+    font-size: 11px;
+  }
+}
+
+/*-----------------Responsive Latest Page end-----------------*/
+
+/*-----------------Most View Page Begin-----------------*/
+/* Top 10 container */
+.top10-container {
+  max-width: 100vw;
+  background-color: #1c1c2e;
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading */
+.top10-container h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tab-buttons button {
+  background-color: #16168c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.tab-buttons button.active {
+  background-color: #ff5ca2;
+  color: white;
+}
+
+/* Top 10 list */
+.top10-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.top10-item {
+  display: flex;
+  align-items: center;
+  background-color: #26263f;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.top10-item .rank-num {
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  margin-right: 10px;
+  width: 30px;
+  text-align: center;
+}
+
+.top10-item img {
+  width: 145px;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.top10-item .info {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 300px;
+  /* or adjust as needed */
+}
+
+/*tittle and badges*/
+.top10-item .title {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  line-height: 1.2;
+  max-width: 300px;
+  /* control wrapping width */
+  word-break: break-word;
+  /* ensures break happens if long word */
+  white-space: normal;
+  /* allows wrapping */
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badges {
+  padding: 10px 10px;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badges.blue {
+  background-color: #1a73e8;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+}
+
+.badges.blue:hover {
+  transform: scale(1.2);
+  box-shadow: none;
+}
+
+.like-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 10;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.synopsis {
+  font-size: 20px;
+  color: #ffffff;
+  flex: 1;
+  line-height: 1.6;
+  ;
+  text-align: justify;
+}
+
+/*-----------------Most View Anime Page End-----------------*/
+
+/*-----------------Responsive Most View Anime Page start-----------------*/
+@media (max-width: 1024px) {
+  .top10-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .top10-item img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto 15px auto;
+  }
+
+  .top10-item .info {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-left {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .top10-item .title {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .badges {
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  .synopsis {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .tab-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-buttons button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .top10-container {
+    padding: 20px 10px;
+  }
+
+  .top10-item {
+    padding: 15px;
+  }
+
+  .rank-num {
+    font-size: 24px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+
+/*-----------------Responsive Most View Anime Page End-----------------*/
+
+/*-----------------Anime description page begin-----------------*/
+/* box */
+.desc-box-wrapper {
+  background-color: #1f2937;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  max-width: 1300px;
+  margin: 10px auto;
+}
+
+/* box content */
+.container-desc {
+  display: flex;
+  gap: 20px;
+}
+
+/* poster position */
+.poster-section {
+  position: relative;
+  margin-left: 50px;
+}
+
+/* poster size */
+.poster {
+  width: 270px;
+  height: 230px;
+  border-radius: 8px;
+}
+
+/* detail */
+.info-section {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.title-desc {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.badges-desc {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.text-badge {
+  font-size: 15px;
+  color: #d1d5db;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.btn-watch,
+.btn-add {
+  color: white;
+  font-size: 16px;
+  margin-top: 7px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-watch {
+  background-color: #ff00b3;
+  border-radius: 20px;
+  width: 210px;
+}
+
+.btn-watch:hover {
+  background-color: #a90185;
+}
+
+.description-details {
+  margin-bottom: 60px;
+  margin-top: 33px;
+  color: #e5e7eb;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.details p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/*-----------------Anime Description Page End-----------------*/
+
+
+/*-----------------Coming Soon page begin-----------------*/
+/* Anime and Movie Schedule List */
+.container-schedule {
+  max-width: 100%;
+  padding: 0 40px;
+  /*to push padding from left to right*/
+  box-sizing: border-box;
+}
+
+.header-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  color: white;
+}
+
+/* Days Tabs */
+.days-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.day {
+  background-color: #2B263C;
+  color: white;
+  padding: 10px 65px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 70px;
+}
+
+.day span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.day.active {
+  background-color: #FF9BC1;
+  color: black;
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/*anime and movie list*/
+.schedule {
+  background-color: #1D1A29;
+  border-radius: 12px;
+  padding: 20px 40px;
+  width: 97%;
+  /*to adjust whole size of padding*/
+  margin-bottom: 30px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #868686;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item .time {
+  width: 70px;
+  color: #aaa;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.item .title {
+  flex-grow: 1;
+  margin: 0 15px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.item .episode {
+  font-size: 18px;
+  color: #aaa;
+  flex-shrink: 0;
+  text-align: justify;
+}
+
+/* Show More */
+.show-more {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+.extra-items.hidden {
+  display: none;
+}
+
+/*-----------------Coming Soon Page End-----------------*/
+
+/*-----------------Responsive Coming Soon Page start-----------------*/
+@media (max-width: 1024px) {
+  .container-schedule {
+    padding: 0 20px;
+  }
+
+  .schedule {
+    padding: 20px;
+  }
+
+  .item {
+    padding: 12px 20px;
+  }
+
+  .item .title {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+
+  .item .episode {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-schedule {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .day {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .day span {
+    font-size: 12px;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 12px;
+  }
+
+  .item .time,
+  .item .title,
+  .item .episode {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .item .title {
+    margin: 0;
+  }
+
+  .schedule {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .show-more {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/*-----------------Responsive Coming Soon Page end-----------------*/
+
+/*-----------------Top airing page begin-----------------*/
+.top10-title {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  border-left: 6px solid #facc15;
+  padding-left: 8px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 12px;
+  color: white;
+}
+
+.top10-card {
+  min-width: 250px;
+  min-height: 375px;
+  background-color: #1e1e1e;
+  border-radius: 6px;
+  padding: 8px;
+  flex-shrink: 0;
+  margin-left: 12px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.top10-card img {
+  border-radius: 6px;
+  width: 225px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.top10-card-image {
+  position: relative;
+}
+
+.top10-card-image img {
+  transition: transform 0.3s ease;
+}
+
+.top10-card-image:hover img {
+  transform: scale(1.1);
+}
+
+.add-btn {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  color: white;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.rating {
+  color: #facc15;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.movie-title {
+  font-size: 15px;
+  margin-top: 9px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn-sm {
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-sm:hover {
+  background-color: #3a3a3a;
+}
+
+/*-----------------Top Airing Page End-----------------*/
+
+/*-----------------Responsive Top Airing Page Start-----------------*/
+@media (max-width: 768px) {
+  .top10-title {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .top10-card {
+    min-width: 160px;
+    min-height: 280px;
+    margin-left: 10px;
+    padding: 6px;
+  }
+
+  .top10-card img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .movie-title {
+    font-size: 13px;
+  }
+
+  .rating {
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .btn-sm {
+    font-size: 11px;
+    padding: 4px 0;
+  }
+
+  .add-btn {
+    font-size: 14px;
+  }
+}
+
+/*-----------------Responsive Top Airing Page Start-----------------*/
+
+/*-----------------About Us page begin-----------------*/
+.about-text h3 {
+  margin-bottom: 15px;
+  padding: 50px;
+  padding-top: 0;
+  max-width: 1000px;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 50px;
+}
+
+.about-text img {
+  padding: 20px;
+  padding-left: 100px;
+  width: 30%;
+  float: left;
+}
+
+.about-texts {
+  padding-left: 100px;
+  float: left;
+}
+
+/*-----------------About Us page end-----------------*/
+
+
+/*-----------------Contact Us page begin-----------------*/
+.container-email {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 40px 40px;
+  width: 100%;
+}
+
+/* Left Side - Form */
+.form-container {
+  flex: 1;
+  background: rgb(130, 130, 130);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.form-container h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+label span {
+  color: red;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #5c67f2;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a54e1;
+}
+/*-----------------Contact Us page end-----------------*/
+
+
+/*-----------------Footer Section-----------------*/
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer {
+  margin-top: auto;
+  background-color: #2b2f32;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 5px 0;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+}
+
+.footer-social {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
+.footer-social a:hover {
+  color: rgb(0, 104, 250);
+  /* social media icon hover effect */
+
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 5px;
+  border-top: 1px solid #444;
+}
+
+/*-----------------Footer Section End-----------------*/

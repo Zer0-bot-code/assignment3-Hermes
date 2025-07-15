@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Anime</title>
+
+  <link rel="stylesheet" type="text/css" href="asset/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+
+  <nav id="navbar">
+  <div class="logo"><a href="index.html">Hermes</a></div>
+
+  <!-- Hamburger menu icon -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Navigation links -->
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li>
+      <a href="movie.html">Movies</a>
+      <ul class="dropdown">
+        <li><a href="movie_most_view.html">Most View</a></li>
+        <li><a href="movie_latest.html">Latest</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="anime.html">Anime</a>
+      <ul class="dropdown">
+        <li><a href="anime_most_view.html">Most View</a></li>
+        <li><a href="anime_latest.html">Latest</a></li>
+      </ul>
+    </li>
+    <li><a href="coming_soon.html">Coming Soon</a></li>
+    <li><a href="top_airing.html">Top Airing</a></li>
+    <li><a href="about_us.html">About Us</a></li>
+    <li><a href="contact_us.html">Contact Us</a></li>
+  </ul>
+
+  <div class="right-section">
+    <a href="search.html"><ion-icon name="search-outline"></ion-icon></a>
+  </div>
+</nav>
+
+
+  <!-- video loop -->
+  <main>
+    <div class="video-wrapper">
+      <div class="video-container">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="asset/video/top_gun_maverick.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!--brief Intro-->
+    <section class="intro-section">
+      <div class="intro-block">
+        <div class="intro-image">
+          <img src="asset/images/mission_impossible_the_final_reckoning_vertical.jpg" alt="Concert Image">
+        </div>
+        <div class="intro-text">
+          <h5>KEEP UP WITH</h5>
+          <h2>TOP MOVIE</h2>
+          <p>
+            Don't know which movie to watch next? With Hermes around, you don't need to waste your time to find a good
+            movie. We will help you by
+            ranking movie based on fan ratings and popularity, making it easy for you to discover the best shows to
+            watch next.</p>
+          <a href="movie_most_view.html" class="intro-button">Know More</a>
+        </div>
+      </div>
+
+      <div class="intro-block reverse">
+        <div class="intro-text">
+          <h5>KEEP UP WITH </h5>
+          <h2>LATEST MOVIE</h2>
+          <p>
+            Worried about missing a great movie? Hermes helps you stay updated with the latest movie releases, so you
+            never miss out on new shows.
+          </p>
+          <a href="movie_latest.html" class="intro-button">Know More</a>
+        </div>
+        <div class="intro-image">
+          <img src="asset/images/the_shawshank_redemption_vertical.jpg" alt="One Piece">
+        </div>
+      </div>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movie.html">Movie</a></li>
+          <li><a href="anime.html">Anime</a></li>
+          <li><a href="coming_soon.html">Coming Soon</a></li>
+          <li><a href="top_airing.html">Top Airing</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Reach us</h3>
+        <p>Chuchuh, 02100 Padang Besar, Perlis</p>
+        <p>companyhermes04@gmail.com</p>
+        <p>017-3092795</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Hermes don't claim any copyright of any kind of content we use in this website. We use already existing
+          pictures and information
+          from the internet. If you have any copyright issues, please contact us via email. We will remove the content
+          immediately.</p>
+        <p>We are not responsible for any content that is not available on this website.</p>
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com/share/1Aw3xtb4qN/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/hermes_anime_movie?igsh=YjNwbGs2cTkxeW1q" target="_blank"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@hermes.official8?_t=ZS-8y2ygDeHKO9&_r=1" target="_blank"><i
+          class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy;2025 Hermes. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="asset/main.js"></script>
+
+</body>
+
+</html>
